@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-theme-jam-example",
-  "author": "Jason Lengstorf <jason@gatsbyjs.com>",
+  "name": "gatsby-theme-amplify-cognito",
+  "author": "Ben Ely <me@benely.co.uk>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlengstorf/gatsby-theme-jam-example.git"
+    "url": "https://github.com/trsben/gatsby-theme-amplify-cognito"
   },
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
@@ -27,6 +27,8 @@
   "keywords": [
     "gatsby",
     "gatsby-theme",
-    "gatsby-plugin"
+    "gatsby-plugin",
+    "amplify",
+    "congnito"
   ]
 }
