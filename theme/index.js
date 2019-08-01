@@ -1,7 +1,4 @@
 export {
-    AuthPiece,
-    AuthStateWrapper,
-    Authenticator,
     ConfirmSignIn,
     ConfirmSignUp,
     FederatedSignIn,
