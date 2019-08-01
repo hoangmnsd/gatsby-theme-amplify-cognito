@@ -19,8 +19,11 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
+    "@aws-amplify/cli": "^1.7.0",
     "@emotion/core": "^10.0.14",
     "@mdx-js/react": "^1.0.21",
+    "aws-amplify": "^1.1.28",
+    "aws-amplify-react": "^2.3.8",
     "gatsby-plugin-theme-ui": "^0.2.2",
     "theme-ui": "^0.2.2"
   },

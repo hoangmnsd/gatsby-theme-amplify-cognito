@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  plugins: ["gatsby-theme-amplify-cognito"],
+  plugins: [{
+    resolve: `gatsby-theme-amplify-cognito`,
+    options: {
+      region: '',
+      userPoolId: '',
+      userPoolWebClientId: ''
+    },
+  }]
 }

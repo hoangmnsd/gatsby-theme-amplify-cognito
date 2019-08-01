@@ -1,6 +1,12 @@
-module.exports = {
+module.exports = ({
+  region = '',
+  userPoolId = '',
+  userPoolWebClientId = ''
+}) => ({
   siteMetadata: {
-    title: "Gatsby Theme Jam Example Submission",
+    title: "Gatsby Theme Amplify with Cognito",
   },
-  plugins: ["gatsby-plugin-theme-ui"],
-}
+  plugins: [
+
+  ],
+})
