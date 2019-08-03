@@ -1,58 +1,54 @@
-# Gatsby Theme Jam Submission Example
+# Gatsby Theme Cognito with Amplify
 
-This repo is an example and potential starting point for theme creators.
+A wrapper theme to use Cognito (Amplify AWS) with your Gatsby website.
 
-It includes:
-- a bare-bones theme (located in `theme/`) that includes basic setup
-- a demo site (located in `demo/`) that installs the theme
-- a Yarn workspaces configuration so the theme and demo can be worked on simultaneously
+## Installation
 
-## How to use this repo
+To use this theme in your Gatsby sites, follow these instructions:
 
-**NOTE:** Make sure to replace `USERNAME` with your GitHub username and `THEMENAME` with your theme name.
-
-1.  Fork this repo.
-
-2.  Rename the forked repo `gatsby-theme-THEMENAME`. (Make sure to replace `THEMENAME` with your chosen name.)
-
-3.  Get the theme set up locally.
+1.  Install the theme
     ```sh
-    # clone the repo
-    git clone git@github.com:USERNAME/gatsby-theme-THEMENAME.git
-
-    # move into the directory
-    cd gatsby-theme-THEMENAME
-
-    # install dependencies
-    yarn
+    npm install --save gatsby-theme-amplify-cognito
     ```
 
-4.  Update `theme/package.json` with your info.
-    ```diff
-      {
-    +   "name": "gatsby-theme-THEMENAME",
-    +   "author": "Your Name <name@example.com>",
-        "repository": {
-          "type": "git",
-    +     "url": "https://github.com/USERNAME/gatsby-theme-THEMENAME.git"
+2.  Set up User Pool in AWS
+
+3.  Add the theme to your `gatsby-config.js`:
+    ```js
+    module.exports = {
+      plugins: [{
+        resolve: `gatsby-theme-amplify-cognito`,
+        options: {
+            region: '',
+            userPoolId: '',
+            userPoolWebClientId: ''
         },
+    }]
+    }
     ```
 
-5.  Start the demo site.
+4. Populate the options with the details from your User Pool
+
+5. Each page is passed a prop of authState and authData which contain the details of the user session
+
+6. Use the components to create your page:
+    ```js
+    import { SignIn, SignOut } from 'gatsby-theme-amplify-cognito';
+
+    const Homepage = ({authState, authData}) => {
+        return <section>
+            {(props.authState !== "signedIn") ?
+                <SignIn authState={authState} /> :
+                <>
+                    <h1>Hello {authData.username}</h1>
+                    <SignOut />
+                </>
+            }
+        </section>
+    }
+    ```
+
+7.  Start your site
     ```sh
-    yarn workspace demo develop
+    gatsby develop
     ```
-
-    The demo will start at http://localhost:8000
-
-    **NOTE:** If you’re new to Yarn workspaces, check out [this post](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for details.
-
-6.  Start editing the theme! The demo site is configured to use the local theme, so any changes you make to the local `theme` directory will be reflected on the demo site for easy local development.
-
-7.  Follow the [submission checklist](./theme/README.md#submission-checklist) to make sure your theme qualifies to win!
-
-8.  [Submit your theme](https://themejam.gatsbyjs.org/submit) to win!
-
-## More information
-
-For contest rules and more information, see [the Theme Jam website](https://themejam.gatsbyjs.org).
