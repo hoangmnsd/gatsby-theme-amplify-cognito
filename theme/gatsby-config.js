@@ -1,7 +1,8 @@
 module.exports = ({
   region = '',
   userPoolId = '',
-  userPoolWebClientId = ''
+  userPoolWebClientId = '',
+  doNotAuthenticate = []
 }) => ({
   siteMetadata: {
     title: "Gatsby Theme Amplify with Cognito",
