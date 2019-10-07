@@ -21,6 +21,7 @@ To use this theme in your Gatsby sites, follow these instructions:
         options: {
             region: '',
             userPoolId: '',
+            identityPoolId: '',
             userPoolWebClientId: '',
 
             // optional, array of paths that won't be authenticated
@@ -32,11 +33,13 @@ To use this theme in your Gatsby sites, follow these instructions:
 
 4. Populate the userPoolId with the Pool Id found under 'General Settings', and userPoolWebClientId with the 'App client id' found under 'App clients'
 
-5. (Optional) Configure any paths that don't require authentication by populating doNotAuthenticate with an array of paths
+5. Populate the identityPoolId with the Id of the identity pool associated with your user pool. IF YOU WANT TO USE AWS SERVICE OBJECTS YOU WILL NEED TO SETUP AN IDENTITY POOL AND CONFIGURE THIS SETTING
 
-6. Each page is passed a prop of authState and authData which contain the details of the user session
+6. (Optional) Configure any paths that don't require authentication by populating doNotAuthenticate with an array of paths
 
-7. Use the components to create your page:
+7. Each page is passed a prop of authState and authData which contain the details of the user session
+
+8. Use the components to create your page:
     ```js
     import { SignIn, SignOut } from 'gatsby-theme-amplify-cognito';
 
@@ -53,7 +56,7 @@ To use this theme in your Gatsby sites, follow these instructions:
     }
     ```
 
-8. Start your site
+9. Start your site
     ```sh
     gatsby develop
     ```
