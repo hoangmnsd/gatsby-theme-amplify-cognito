@@ -1,6 +1,7 @@
 module.exports = ({
   region = '',
   userPoolId = '',
+  identityPoolId = '',
   userPoolWebClientId = '',
   doNotAuthenticate = []
 }) => ({

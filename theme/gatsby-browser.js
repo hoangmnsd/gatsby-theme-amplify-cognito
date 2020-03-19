@@ -12,6 +12,7 @@ export const wrapPageElement = ({ element, props }, options) => {
     region: options.region,
     userPoolId: options.userPoolId,
     userPoolWebClientId: options.userPoolWebClientId,
+    identityPoolId: options.identityPoolId,
   })
 
   return <AuthenticatorProvider>{element}</AuthenticatorProvider>
