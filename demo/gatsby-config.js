@@ -5,12 +5,14 @@
  */
 
 module.exports = {
-  plugins: [{
-    resolve: `gatsby-theme-amplify-cognito`,
-    options: {
-      region: '',
-      userPoolId: '',
-      userPoolWebClientId: ''
+  plugins: [
+    {
+      resolve: `@webriq/gatsby-theme-amplify-cognito`,
+      options: {
+        region: "",
+        userPoolId: "",
+        userPoolWebClientId: "",
+      },
     },
-  }]
+  ],
 }
