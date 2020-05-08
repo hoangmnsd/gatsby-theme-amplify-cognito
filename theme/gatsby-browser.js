@@ -3,8 +3,10 @@ import Amplify from "aws-amplify"
 import { AuthenticatorProvider } from "./src/components/amplify"
 
 export const wrapPageElement = ({ element, props }, options) => {
-
-  if (typeof(options.doNotAuthenticate) == "Array" && options.doNotAuthenticate.includes(props.path)) {
+  if (
+    typeof options.doNotAuthenticate == "object" &&
+    options.doNotAuthenticate.includes(props.path)
+  ) {
     return element
   }
 
