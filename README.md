@@ -9,7 +9,7 @@ To use this theme in your Gatsby sites, follow these instructions:
 1. Install the theme
 
    ```sh
-   npm install --save @bridge2terabithia/gatsby-theme-amplify-cognito
+   npm install --save @hoangmnsd/gatsby-theme-amplify-cognito
    ```
 
 2. Set up a **Cognito User Pool in AWS** and create an **App Client**. Ensure that the **App client secret** setting is set to **no secret key**.
@@ -22,7 +22,7 @@ To use this theme in your Gatsby sites, follow these instructions:
    module.exports = {
      plugins: [
        {
-         resolve: `@bridge2terabithia/gatsby-theme-amplify-cognito`,
+         resolve: `@hoangmnsd/gatsby-theme-amplify-cognito`,
          options: {
            region: "us-east-1", // replace with region of user pool
            userPoolId: 'us-east-1_OZIxeIDqs",', // replace with user pool id
@@ -51,7 +51,7 @@ To use this theme in your Gatsby sites, follow these instructions:
 8. Use the components to create your page:
 
    ```jsx
-   import { SignIn, SignOut } from "@bridge2terabithia/gatsby-theme-amplify-cognito";
+   import { SignIn, SignOut } from "@hoangmnsd/gatsby-theme-amplify-cognito";
 
    const Homepage = ({ authState, authData }) => {
      return (

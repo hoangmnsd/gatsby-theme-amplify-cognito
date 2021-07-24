@@ -7,7 +7,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: `@bridge2terabithia/gatsby-theme-amplify-cognito`,
+      resolve: `@hoangmnsd/gatsby-theme-amplify-cognito`,
       options: {
         region: "",
         userPoolId: "",
