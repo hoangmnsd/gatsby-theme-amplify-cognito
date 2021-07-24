@@ -11,5 +11,5 @@ export default withAuthenticator(AuthenticatorProvider, {
   signUpConfig: {
     hiddenDefaults: ["phone_number"],
   },
-  includeGreetings: true,
+  // includeGreetings: true,
 })

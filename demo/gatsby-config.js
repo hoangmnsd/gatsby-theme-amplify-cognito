@@ -7,7 +7,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: `@webriq/gatsby-theme-amplify-cognito`,
+      resolve: `@hoangmnsd/gatsby-theme-amplify-cognito`,
       options: {
         region: "",
         userPoolId: "",

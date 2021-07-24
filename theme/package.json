@@ -1,11 +1,11 @@
 {
-  "name": "@webriq/gatsby-theme-amplify-cognito",
-  "author": "Dorell James <dorelljames@webriq.com>",
+  "name": "@hoangmnsd/gatsby-theme-amplify-cognito",
+  "author": "Hoang Le Huy <hoangmnsd@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/webriq/gatsby-theme-amplify-cognito"
+    "url": "https://github.com/hoangmnsd/gatsby-theme-amplify-cognito"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {

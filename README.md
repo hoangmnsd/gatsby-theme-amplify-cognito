@@ -9,7 +9,7 @@ To use this theme in your Gatsby sites, follow these instructions:
 1. Install the theme
 
    ```sh
-   npm install --save @webriq/gatsby-theme-amplify-cognito
+   npm install --save @hoangmnsd/gatsby-theme-amplify-cognito
    ```
 
 2. Set up a **Cognito User Pool in AWS** and create an **App Client**. Ensure that the **App client secret** setting is set to **no secret key**.
@@ -22,11 +22,11 @@ To use this theme in your Gatsby sites, follow these instructions:
    module.exports = {
      plugins: [
        {
-         resolve: `@webriq/gatsby-theme-amplify-cognito`,
+         resolve: `@hoangmnsd/gatsby-theme-amplify-cognito`,
          options: {
            region: "us-east-1", // replace with region of user pool
-           userPoolId: 'us-east-1_OZIxeIDqs",' // replace with user pool id
-           identityPoolId: "23ab3gt81t2sanvfg84mh7xnpp" // replace with identity pool associated with user pool
+           userPoolId: 'us-east-1_OZIxeIDqs",', // replace with user pool id
+           identityPoolId: "23ab3gt81t2sanvfg84mh7xnpp", // replace with identity pool associated with user pool
            userPoolWebClientId:
              "us-east-1:bc89f200-299e-4269-8fd2-7caf9e8b0547", // replace with app client id
 
@@ -51,7 +51,7 @@ To use this theme in your Gatsby sites, follow these instructions:
 8. Use the components to create your page:
 
    ```jsx
-   import { SignIn, SignOut } from "@webriq/gatsby-theme-amplify-cognito";
+   import { SignIn, SignOut } from "@hoangmnsd/gatsby-theme-amplify-cognito";
 
    const Homepage = ({ authState, authData }) => {
      return (
@@ -77,4 +77,4 @@ To use this theme in your Gatsby sites, follow these instructions:
 
 ## Credits
 
-Forked from the awesome and original work of [https://github.com/trsben/gatsby-theme-amplify-cognito](https://github.com/trsben/gatsby-theme-amplify-cognito).
+Forked from the awesome and original work of [https://github.com/webriq/gatsby-theme-amplify-cognito](https://github.com/webriq/gatsby-theme-amplify-cognito).
