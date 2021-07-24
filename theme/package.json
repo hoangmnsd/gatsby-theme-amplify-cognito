@@ -1,6 +1,6 @@
 {
-  "name": "@hoangmnsd/gatsby-theme-amplify-cognito",
-  "author": "Hoang Le Huy <hoangmnsd@gmail.com>",
+  "name": "@bridge2terabithia/gatsby-theme-amplify-cognito",
+  "author": "Hoangmnsd <hoangmnsd@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/hoangmnsd/gatsby-theme-amplify-cognito"
