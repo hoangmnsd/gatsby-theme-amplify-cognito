@@ -1,7 +1,29 @@
 {
-  "private": true,
   "workspaces": [
     "theme",
     "demo"
-  ]
+  ],
+  "name": "@hoangmnsd/gatsby-theme-amplify-cognito",
+  "description": "A wrapper theme to use Cognito (Amplify AWS) with your Gatsby website.",
+  "version": "1.1.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangmnsd/gatsby-theme-amplify-cognito.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "congnito",
+    "gatsby-plugin"
+  ],
+  "author": "hoangmnsd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangmnsd/gatsby-theme-amplify-cognito/issues"
+  },
+  "homepage": "https://github.com/hoangmnsd/gatsby-theme-amplify-cognito#readme"
 }
