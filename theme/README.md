@@ -25,13 +25,15 @@ To use this theme in your Gatsby sites, follow these instructions:
          resolve: `@hoangmnsd/gatsby-theme-amplify-cognito`,
          options: {
            region: "us-east-1", // replace with region of user pool
-           userPoolId: 'us-east-1_OZIxeIDqs",' // replace with user pool id
+           userPoolId: 'us-east-1_OZIxeIDqs', // replace with user pool id
            identityPoolId: "23ab3gt81t2sanvfg84mh7xnpp", // replace with identity pool associated with user pool
            userPoolWebClientId:
-             "bc89f200-299e-4269-8fd2-7caf9e8b0547", // replace with app client id
+             "us-east-1:bc89f200-299e-4269-8fd2-7caf9e8b0547", // replace with app client id
 
-           // optional, array of paths that won't be authenticated
+           // optional, array of paths that won't be authenticated. Don't use `doNotAuthenticate` and `doAuthenticate` at the same time
            doNotAuthenticate: ["/", "/page-2/"],
+           // optional, array of paths that will be authenticated. Don't use `doNotAuthenticate` and `doAuthenticate` at the same time
+           // doAuthenticate: ["/page-3", "/page-4/"],
          },
        },
      ],
@@ -44,14 +46,16 @@ To use this theme in your Gatsby sites, follow these instructions:
 
    > NOTE: IF you want to use AWS Service Objects, you will need to setup an identity pool and configure this setting. See **Federated Identities**.
 
-6. (Optional) Configure any paths that don't require authentication by populating `doNotAuthenticate` with an array of paths. Make sure to append `/` at the end as paths in Gatsby are always trailed with slashes.
+6. (Optional)  
+- Configure any paths that don't require authentication by populating `doNotAuthenticate` with an array of paths. Make sure to append `/` at the end as paths in Gatsby are always trailed with slashes. Don't use `doNotAuthenticate` and `doAuthenticate` at the same time
+
+- Configure any paths that do require authentication by populating `doAuthenticate` with an array of paths. Make sure to append `/` at the end as paths in Gatsby are always trailed with slashes. Don't use `doNotAuthenticate` and `doAuthenticate` at the same time
 
 7. Each page is passed a prop of `authState` and `authData` which contain the details of the user session.
 
-8. Use the components to create your page:
-
+8. Use the components to create your page. Example:  
    ```jsx
-   import { SignIn, SignOut } from "@hoangmnsd/gatsby-theme-amplify-cognito"
+   import { SignIn, SignOut } from "@hoangmnsd/gatsby-theme-amplify-cognito";
 
    const Homepage = ({ authState, authData }) => {
      return (
@@ -65,8 +69,8 @@ To use this theme in your Gatsby sites, follow these instructions:
            </>
          )}
        </section>
-     )
-   }
+     );
+   };
    ```
 
 9. Start your site
@@ -77,4 +81,4 @@ To use this theme in your Gatsby sites, follow these instructions:
 
 ## Credits
 
-Forked from the awesome and original work of [https://github.com/trsben/gatsby-theme-amplify-cognito](https://github.com/trsben/gatsby-theme-amplify-cognito).
+Forked from the awesome and original work of [https://github.com/webriq/gatsby-theme-amplify-cognito](https://github.com/webriq/gatsby-theme-amplify-cognito).
