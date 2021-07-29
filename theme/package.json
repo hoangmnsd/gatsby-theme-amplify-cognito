@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/hoangmnsd/gatsby-theme-amplify-cognito.git"
   },
-  "version": "1.1.3",
+  "version": "1.1.4",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
