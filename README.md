@@ -79,6 +79,15 @@ To use this theme in your Gatsby sites, follow these instructions:
    gatsby develop
    ```
 
+
+## (for Publisher) How to publish this package to npm
+
+```sh
+npm login
+cd ./theme/
+npm publish --access public
+```
+
 ## Credits
 
 Forked from the awesome and original work of [https://github.com/webriq/gatsby-theme-amplify-cognito](https://github.com/webriq/gatsby-theme-amplify-cognito).
